@@ -7,8 +7,13 @@
   </head>
   <body>
     <h2 class="title">Online Store</h2>
-    <div ng-controller="dataCtrl">
-      {{myWelcome}}
+    <div class="mainStore" ng-controller="dataCtrl">
+      <h2>Product Name</h2>
+      <ul>
+        <li ng-repeat="x in myData">
+          {{x.name}},{{x.defaultPriceInCents}}
+        </li>
+     </ul>
     </div>
     <script src="store.js"></script>
   </body>

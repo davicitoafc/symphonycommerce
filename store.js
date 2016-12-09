@@ -4,8 +4,19 @@ angular.module('store', [])
         method : "GET",
         url : "https://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js"
     }).then(function mySucces(response) {
-        $scope.myWelcome = response.data;
+        $scope.myData = response.data.products;
+
+        console.log(response.data.products)
+      //   var data = $scope.myData;
+      //   var store = data.products
+      //
+      // for (var i in store) {
+      //   console.log(store[i].name);
+      //
+      // }
+
+
     }, function myError(response) {
-        $scope.myWelcome = response.statusText;
-    });
+        $scope.myData = response.statusText;
+  });
 });
