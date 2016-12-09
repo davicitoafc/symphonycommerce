@@ -8,12 +8,20 @@
   <body>
     <h2 class="title">Online Store</h2>
     <div class="mainStore" ng-controller="dataCtrl">
-      <h2>Product Name</h2>
-      <ul>
-        <li ng-repeat="x in myData">
-          {{x.name}},{{x.defaultPriceInCents}}
-        </li>
-     </ul>
+
+     <table style="width:100%">
+      <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+      <tr ng-repeat="x in myData">
+        <td>{{x.ref}}</td>
+        <td>{{x.name}}</td>
+        <td>$ {{x.defaultPriceInCents/100}}</td>
+      </tr>
+    </table>
+
     </div>
     <script src="store.js"></script>
   </body>

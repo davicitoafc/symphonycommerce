@@ -2,7 +2,19 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-.mainStore {
-  border: 1px solid black;
-  width: auto;
+.title {
+  text-align: center;
+}
+
+li {
+  display: block;
+}
+
+.price {
+  float: right;
+}
+
+th {
+  text-align: left;
+  padding-bottom: 25px;
 }

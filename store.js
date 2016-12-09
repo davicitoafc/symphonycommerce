@@ -6,16 +6,6 @@ angular.module('store', [])
     }).then(function mySucces(response) {
         $scope.myData = response.data.products;
 
-        console.log(response.data.products)
-      //   var data = $scope.myData;
-      //   var store = data.products
-      //
-      // for (var i in store) {
-      //   console.log(store[i].name);
-      //
-      // }
-
-
     }, function myError(response) {
         $scope.myData = response.statusText;
   });
